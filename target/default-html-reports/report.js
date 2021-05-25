@@ -1,13 +1,8 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/StudentBooks.feature");
 formatter.feature({
-  "name": "Only Authorized Users should be able to login",
+  "name": "Student can find book by using search box with book\u0027s Name and Author.",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@wip"
-    }
-  ]
+  "keyword": "Feature"
 });
 formatter.background({
   "name": "",
@@ -28,58 +23,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Login as a librarian",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@wip"
-    }
-  ]
-});
-formatter.step({
-  "name": "the user enters the librarian information",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_librarian_information()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user should be able to login",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_should_be_able_to_login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user is on the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Login as a student",
+  "name": "verify that student can find book by using search box with name",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -90,7 +34,7 @@ formatter.scenario({
 });
 formatter.step({
   "name": "the user enters the student information",
-  "keyword": "When "
+  "keyword": "Given "
 });
 formatter.match({
   "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_student_information()"
@@ -99,175 +43,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user should be able to login",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_should_be_able_to_login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenarioOutline({
-  "name": "UnAuthorized users should not be able to login to the application",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "the user enters the invalid user \"\u003cemail\u003e\"\"\u003cpassword\u003e\"",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "the user enters the invalid passwords \"\u003cemail\u003e\"\"\u003cpassword\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "the UnAuthorized user should not be able to login",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "email",
-        "password"
-      ]
-    },
-    {
-      "cells": [
-        "librarian181@library",
-        "WwRsaD3"
-      ]
-    },
-    {
-      "cells": [
-        "librarian181@librar",
-        "WwRsaD3J"
-      ]
-    }
-  ]
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user is on the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "UnAuthorized users should not be able to login to the application",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@wip"
-    }
-  ]
-});
-formatter.step({
-  "name": "the user enters the invalid user \"librarian181@library\"\"WwRsaD3\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_user(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user enters the invalid passwords \"librarian181@library\"\"WwRsaD3\"",
+  "name": "the user enters book\u0027s name into search input",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_passwords(java.lang.String,java.lang.String)"
+  "location": "com.PubLibrary.step_definitions.StudentBooksDefs.theUserEntersBookSNameIntoSearchInput()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the UnAuthorized user should not be able to login",
+  "name": "the user should be able to see the book\u0027s name under the Name title",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_UnAuthorized_user_should_not_be_able_to_login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user is on the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "UnAuthorized users should not be able to login to the application",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@wip"
-    }
-  ]
-});
-formatter.step({
-  "name": "the user enters the invalid user \"librarian181@librar\"\"WwRsaD3J\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_user(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user enters the invalid passwords \"librarian181@librar\"\"WwRsaD3J\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_passwords(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the UnAuthorized user should not be able to login",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.PubLibrary.step_definitions.loginDefs.the_UnAuthorized_user_should_not_be_able_to_login()"
+  "location": "com.PubLibrary.step_definitions.StudentBooksDefs.theUserShouldBeAbleToSeeTheBookSNameUnderTheNameTitle()"
 });
 formatter.result({
   "status": "passed"

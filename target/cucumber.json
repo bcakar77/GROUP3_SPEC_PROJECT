@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3766000000,
+              "duration": 5409000000,
               "status": "passed"
             },
             "line": 5,
@@ -24,11 +24,11 @@
         ]
       },
       {
-        "start_timestamp": "2021-05-25T15:29:23.076Z",
+        "start_timestamp": "2021-05-25T20:37:58.981Z",
         "before": [
           {
             "result": {
-              "duration": 2510000000,
+              "duration": 2153000000,
               "status": "passed"
             },
             "match": {
@@ -37,13 +37,13 @@
           }
         ],
         "line": 7,
-        "name": "Login as a librarian",
+        "name": "verify that student can find book by using search box with name",
         "description": "",
-        "id": "only-authorized-users-should-be-able-to-login;login-as-a-librarian",
+        "id": "student-can-find-book-by-using-search-box-with-book-s-name-and-author.;verify-that-student-can-find-book-by-using-search-box-with-name",
         "after": [
           {
             "result": {
-              "duration": 727000000,
+              "duration": 685000000,
               "status": "passed"
             },
             "match": {
@@ -56,338 +56,37 @@
         "steps": [
           {
             "result": {
-              "duration": 393000000,
+              "duration": 425000000,
               "status": "passed"
             },
             "line": 9,
-            "name": "the user enters the librarian information",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_librarian_information()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3016000000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "the user should be able to login",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_should_be_able_to_login()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@wip"
-          }
-        ]
-      },
-      {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 3338000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-05-25T15:29:33.617Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1426000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 12,
-        "name": "Login as a student",
-        "description": "",
-        "id": "only-authorized-users-should-be-able-to-login;login-as-a-student",
-        "after": [
-          {
-            "result": {
-              "duration": 712000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 352000000,
-              "status": "passed"
-            },
-            "line": 14,
             "name": "the user enters the student information",
             "match": {
               "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_student_information()"
             },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3008000000,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "the user should be able to login",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_should_be_able_to_login()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@wip"
-          }
-        ]
-      },
-      {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 2925000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-            },
             "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-05-25T15:29:42.460Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1374000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 24,
-        "name": "UnAuthorized users should not be able to login to the application",
-        "description": "",
-        "id": "only-authorized-users-should-be-able-to-login;unauthorized-users-should-not-be-able-to-login-to-the-application;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 810000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 288000000,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "the user enters the invalid user \"librarian181@library\"\"WwRsaD3\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"librarian181@library\"",
-                  "offset": 33
-                },
-                {
-                  "val": "\"WwRsaD3\"",
-                  "offset": 55
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_user(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
           },
           {
             "result": {
-              "duration": 200000000,
+              "duration": 6277000000,
               "status": "passed"
             },
-            "line": 20,
-            "name": "the user enters the invalid passwords \"librarian181@library\"\"WwRsaD3\"",
+            "line": 10,
+            "name": "the user enters book\u0027s name into search input",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"librarian181@library\"",
-                  "offset": 38
-                },
-                {
-                  "val": "\"WwRsaD3\"",
-                  "offset": 60
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_passwords(java.lang.String,java.lang.String)"
+              "location": "com.PubLibrary.step_definitions.StudentBooksDefs.theUserEntersBookSNameIntoSearchInput()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3007000000,
+              "duration": 31000000,
               "status": "passed"
             },
-            "line": 21,
-            "name": "the UnAuthorized user should not be able to login",
+            "line": 11,
+            "name": "the user should be able to see the book\u0027s name under the Name title",
             "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_UnAuthorized_user_should_not_be_able_to_login()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@wip"
-          }
-        ]
-      },
-      {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 2986000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-05-25T15:29:51.075Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1359000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 25,
-        "name": "UnAuthorized users should not be able to login to the application",
-        "description": "",
-        "id": "only-authorized-users-should-be-able-to-login;unauthorized-users-should-not-be-able-to-login-to-the-application;;3",
-        "after": [
-          {
-            "result": {
-              "duration": 684000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 295000000,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "the user enters the invalid user \"librarian181@librar\"\"WwRsaD3J\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"librarian181@librar\"",
-                  "offset": 33
-                },
-                {
-                  "val": "\"WwRsaD3J\"",
-                  "offset": 54
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_user(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 203000000,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "the user enters the invalid passwords \"librarian181@librar\"\"WwRsaD3J\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"librarian181@librar\"",
-                  "offset": 38
-                },
-                {
-                  "val": "\"WwRsaD3J\"",
-                  "offset": 59
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_passwords(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3008000000,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "the UnAuthorized user should not be able to login",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_UnAuthorized_user_should_not_be_able_to_login()"
+              "location": "com.PubLibrary.step_definitions.StudentBooksDefs.theUserShouldBeAbleToSeeTheBookSNameUnderTheNameTitle()"
             },
             "keyword": "Then "
           }
@@ -399,20 +98,11 @@
         ]
       }
     ],
-    "name": "Only Authorized Users should be able to login",
+    "name": "Student can find book by using search box with book\u0027s Name and Author.",
     "description": "",
-    "id": "only-authorized-users-should-be-able-to-login",
+    "id": "student-can-find-book-by-using-search-box-with-book-s-name-and-author.",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/login.feature",
-    "tags": [
-      {
-        "name": "@wip",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/StudentBooks.feature",
+    "tags": []
   }
 ]
