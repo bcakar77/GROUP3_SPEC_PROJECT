@@ -12,9 +12,9 @@ public class DashboardPage extends BasePage{
         PageFactory.initElements(Driver.get(),this);
     }
     @FindBy(id="navbarDropdown")
-    private WebElement userNameDropdown;
+    public WebElement userNameDropdown;
     @FindBy(xpath = "//a[@class='dropdown-item']")
-    private WebElement logout;
+    public WebElement logout;
 
     public void logOut(){
         userNameDropdown.click();

@@ -1,12 +1,14 @@
 package com.PubLibrary.step_definitions;
 
 import com.PubLibrary.pages.DashboardPage;
+import com.PubLibrary.pages.LoginPage;
 import com.PubLibrary.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class Logout {
+    DashboardPage dashboardPage=new DashboardPage();
     @When("user is at the dashbord page")
     public void user_is_at_the_dashbord_page() {
         // Write code here that turns the phrase above into concrete actions
@@ -18,15 +20,12 @@ public class Logout {
 
     @When("clicks the button with his username")
     public void clicks_the_button_with_his_username() {
-        DashboardPage dashboardPage=new DashboardPage();
-        dashboardPage.logOut();
+       dashboardPage.userNameDropdown.click();
     }
-
 
     @When("a drowdown shows up")
     public void a_drowdown_shows_up() {
-        // Write code here that turns the phrase above into concrete actions
-     //   throw new io.cucumber.java.PendingException();
+       dashboardPage.logout.click();
     }
 
 
@@ -43,7 +42,7 @@ public class Logout {
     public void user_should_be_in_the_logout_page() {
         // Write code here that turns the phrase above into concrete actions
        // throw new io.cucumber.java.PendingException();
-        Assert.assertEquals("https://library3.cybertekschool.com/#dashboard", Driver.get().getCurrentUrl());
+        Assert.assertEquals("https://library3.cybertekschool.com/login.html", Driver.get().getCurrentUrl());
     }
 
 
