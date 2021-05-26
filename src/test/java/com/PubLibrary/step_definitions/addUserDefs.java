@@ -1,32 +1,48 @@
 package com.PubLibrary.step_definitions;
 
-import com.PubLibrary.pages.LoginPage;
+import com.PubLibrary.pages.AddUserPage;
+import com.PubLibrary.pages.DashboardPage;
+import com.PubLibrary.pages.UsersPage;
 import com.PubLibrary.utilities.BrowserUtils;
 import com.PubLibrary.utilities.ConfigurationReader;
-import com.PubLibrary.utilities.Driver;
-import io.cucumber.java.en.Given;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class addUserDefs {
-    @Given("the user is on the login page")
-    public void the_user_is_on_the_login_page() {
-        String url = ConfigurationReader.get("url");
-        Driver.get().get(url);
+    UsersPage usersPage = new UsersPage();
+
+    @When("the user navigate to Users module")
+    public void user_navigate_to_Users_module() {
+        BrowserUtils.waitForClickablility(new AddUserPage().usersButton,5);
+        new AddUserPage().usersButton.click();
     }
-
-    @When("the user enters the librarian information")
-    public void the_user_enters_the_librarian_information() {
-        new LoginPage().signInAsLibrarian();
+    @When("the user click on Add User button")
+    public void user_click_on_Add_User_button() {
+        BrowserUtils.waitForClickablility(new AddUserPage().addUserButton, 5);
+        new AddUserPage().addUserButton.click();
+    }
+    @And("fill the required input boxes with valid inputs {string} {string} {string}")
+    public void fillTheRequiredInputBoxesWithValidInputs() {
+        BrowserUtils.waitForVisibility(new AddUserPage().fullNameInput,5);
+        String fullName = ConfigurationReader.get("Full_Name");
+        String password = ConfigurationReader.get("Librarian_Password");
+        String email = ConfigurationReader.get("Librarian_Email");
+        new AddUserPage().fullNameInput.sendKeys(fullName);
+        new AddUserPage().passInput.sendKeys(password);
+        new AddUserPage().emailInput.sendKeys(email);
 
     }
-
-    @Then("the user should be able to login")
-    public void the_user_should_be_able_to_login() {
-        BrowserUtils.waitFor(3);
-        String actualTitle = Driver.get().getTitle();
-        Assert.assertEquals("Library",actualTitle);
+    @When("user clicks on Save Changes Button")
+    public void user_clicks_Save_Changes_button(){
+        new AddUserPage().saveChangesButton.click();
+    }
+    @Then("verifying message should be displayed")
+    public void verifyingMessage(){
+        String expectedResult = "The user has been created.";
+        String displayedMessage = "The user has been created.";
+        Assert.assertEquals(expectedResult,displayedMessage);
     }
 
 }

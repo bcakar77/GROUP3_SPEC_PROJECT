@@ -15,7 +15,7 @@ public class AddUserPage extends LoginPage{
     @FindBy(xpath = "//*[@id='menu_item']/li[2]")
     public WebElement usersButton;
 
-    @FindBy(className = "btn btn-lg btn-outline btn-primary btn-sm")
+    @FindBy(css = ".portlet-title>span>a")
     public WebElement addUserButton;
 
     @FindBy (name = "full_name")
@@ -29,30 +29,6 @@ public class AddUserPage extends LoginPage{
 
     @FindBy (className = "btn btn-primary")
     public WebElement saveChangesButton;
-
-    @FindBy (className = "modal-title")
-    public WebElement addUserPage;
-
-    public void addUser(){
-        signInAsLibrarian();
-        usersButton.click();
-        BrowserUtils.waitForVisibility(addUserButton, 3);
-
-        addUserButton.click();
-        BrowserUtils.verifyElementDisplayed(addUserPage);
-        String fullName = ConfigurationReader.get("Full_Name");
-        String password = ConfigurationReader.get("Librarian_Password");
-        String email = ConfigurationReader.get("Librarian_Email");
-
-        fullNameInput.sendKeys(fullName);
-        passInput.sendKeys(password);
-        emailInput.sendKeys(email);
-        saveChangesButton.click();
-
-
-
-    }
-
 
 
 }
