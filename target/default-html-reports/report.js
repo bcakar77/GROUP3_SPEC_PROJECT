@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Smoke.feature");
 formatter.feature({
-  "name": "Only Authorized Users should be able to login",
+  "name": "smoketest",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@smoke"
     }
   ]
 });
@@ -33,7 +33,7 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@smoke"
     }
   ]
 });
@@ -84,7 +84,7 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@smoke"
     }
   ]
 });
@@ -177,7 +177,7 @@ formatter.scenario({
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@smoke"
     }
   ]
 });
@@ -238,7 +238,7 @@ formatter.scenario({
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@smoke"
     }
   ]
 });
@@ -268,6 +268,97 @@ formatter.step({
 });
 formatter.match({
   "location": "com.PubLibrary.step_definitions.loginDefs.the_UnAuthorized_user_should_not_be_able_to_login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Librarian users should be able to add books",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@smoke"
+    }
+  ]
+});
+formatter.step({
+  "name": "the user enters the librarian information",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_librarian_information()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user navigate to Books module",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.PubLibrary.step_definitions.AddBookSepDefs.the_user_navigate_to_Books_module()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user click on Add Book button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.PubLibrary.step_definitions.AddBookSepDefs.the_user_click_on_Add_Book_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "fill the necessary input boxes with valid inputs \"A Book Name\" \"2020\" \"1234567890\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.PubLibrary.step_definitions.AddBookSepDefs.fillTheNecessaryInputBoxesWithValidInputs(java.lang.String,java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user click on Save Changes",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.PubLibrary.step_definitions.AddBookSepDefs.the_user_click_on_Save_Changes()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "\"The book has been created.\" message should be displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.PubLibrary.step_definitions.AddBookSepDefs.message_should_be_displayed(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
