@@ -8,6 +8,6 @@ Feature: Only librarians should be able to add users
     When the user enters the librarian information
     And the user navigate to Users module
     And the user click on Add User button
-    And fill the necessary input boxes with valid inputs "Users full name" "password 12345" "email@librarian.com"
+    And fill the necessary input boxes with valid inputs "Users full name" "12345" "email@librarian.com"
     And the user click on Save Changes
     Then "The user has been created." message should be displayed

@@ -7,13 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AddUserPage extends LoginPage{
-    //This page is under the User Management page. When you click "+Add user", you enter that page
+public class AddUserPage{
+
     public AddUserPage(){
         PageFactory.initElements(Driver.get(),this);
     }
-    @FindBy(xpath = "//*[@id='menu_item']/li[2]")
-    public WebElement usersButton;
+
 
     @FindBy(css = ".portlet-title>span>a")
     public WebElement addUserButton;
@@ -21,13 +20,13 @@ public class AddUserPage extends LoginPage{
     @FindBy (name = "full_name")
     public WebElement fullNameInput;
 
-    @FindBy (name = "password")
+    @FindBy (xpath = "//label[contains(text(),'Password')]")
     public WebElement passInput;
 
-    @FindBy (name = "email")
+    @FindBy (xpath = "//label[contains(text(),'Email')]")
     public WebElement emailInput;
 
-    @FindBy (className = "btn btn-primary")
+    @FindBy (xpath = "//button[@class='btn btn-primary']")
     public WebElement saveChangesButton;
 
 
