@@ -17,14 +17,35 @@ public class AddUserPage{
     @FindBy(css = ".portlet-title>span>a")
     public WebElement addUserButton;
 
-    @FindBy (name = "full_name")
+    @FindBy(xpath = "//label[contains(text(),'Full Name')]")
+    public WebElement fullNameTitle;
+
+    @FindBy (css = "[name='full_name']")
     public WebElement fullNameInput;
+
+    @FindBy(xpath = "//label[contains(text(),'Password')]")
+    public WebElement passwordTitle;
 
     @FindBy (xpath = "//label[contains(text(),'Password')]")
     public WebElement passInput;
 
+    @FindBy(xpath = "//label[contains(text(),'Email')]")
+    public WebElement emailTitle;
+
     @FindBy (xpath = "//label[contains(text(),'Email')]")
     public WebElement emailInput;
+
+    @FindBy(xpath = "//label[contains(text(),'User Group')]")
+    public WebElement userGroupTitle;
+
+    @FindBy(xpath = "//label[contains(text(),'Status')]")
+    public WebElement statusTitle;
+
+    @FindBy(xpath = "//label[contains(text(),'Start Date')]")
+    public WebElement startDateTitle;
+
+    @FindBy(xpath = "//label[contains(text(),'End Date')]")
+    public WebElement endDateTitle;
 
     @FindBy (xpath = "//button[@class='btn btn-primary']")
     public WebElement saveChangesButton;
