@@ -31,7 +31,7 @@ Feature: Only librarians should be able to add books
       | Book Category |
       | Description   |
 
-  @verifyBookCategories
+  @verifyBookCategories @smoke
   Scenario: Verify the book categories in the Add Book Page
     When the user enters the librarian information
     And the user navigate to Books module

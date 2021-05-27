@@ -1,9 +1,9 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
-        "line": 5,
+        "line": 4,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,40 +11,36 @@
         "steps": [
           {
             "result": {
-              "duration": 3357598700,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-            },
+            "line": 5,
+            "name": "the user is on the dashboard page",
+            "match": {},
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2021-05-27T12:59:38.070Z",
+        "start_timestamp": "2021-05-27T15:05:45.767Z",
         "before": [
           {
             "result": {
-              "duration": 2343318300,
-              "status": "passed"
+              "duration": 1000000,
+              "status": "skipped"
             },
             "match": {
               "location": "com.PubLibrary.step_definitions.Hooks.setUp()"
             }
           }
         ],
-        "line": 8,
-        "name": "Login as a librarian",
+        "line": 7,
+        "name": "Verify that the log out button is located under username dropdown",
         "description": "",
-        "id": "smoketest;login-as-a-librarian",
+        "id": "user-should-be-able-to-log-out;verify-that-the-log-out-button-is-located-under-username-dropdown",
         "after": [
           {
             "result": {
-              "duration": 758778300,
-              "status": "passed"
+              "status": "skipped"
             },
             "match": {
               "location": "com.PubLibrary.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
@@ -56,653 +52,68 @@
         "steps": [
           {
             "result": {
-              "duration": 373772300,
-              "status": "passed"
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user navigates to the top corner of the page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "clicks on the user name item",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
             },
             "line": 10,
-            "name": "the user enters the librarian information",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_librarian_information()"
-            },
-            "keyword": "When "
+            "name": "the logout button should be clickable",
+            "match": {},
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 3013882900,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 11,
-            "name": "the user should be able to login",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_should_be_able_to_login()"
+            "name": "user clicks the button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
             },
+            "line": 12,
+            "name": "user should be in the login page",
+            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@smoke"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 2817267500,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-05-27T12:59:48.006Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1375686100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 13,
-        "name": "Login as a student",
-        "description": "",
-        "id": "smoketest;login-as-a-student",
-        "after": [
-          {
-            "result": {
-              "duration": 665911300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 302813500,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "the user enters the student information",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_student_information()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3008967300,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "the user should be able to login",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_should_be_able_to_login()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 3466585500,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-05-27T12:59:56.190Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1615257400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 25,
-        "name": "UnAuthorized users should not be able to login to the application",
-        "description": "",
-        "id": "smoketest;unauthorized-users-should-not-be-able-to-login-to-the-application;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 1017687600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 286824000,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "the user enters the invalid user \"librarian181@library\"\"WwRsaD3\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"librarian181@library\"",
-                  "offset": 33
-                },
-                {
-                  "val": "\"WwRsaD3\"",
-                  "offset": 55
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_user(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 201874300,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "the user enters the invalid passwords \"librarian181@library\"\"WwRsaD3\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"librarian181@library\"",
-                  "offset": 38
-                },
-                {
-                  "val": "\"WwRsaD3\"",
-                  "offset": 60
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_passwords(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3007460500,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "the UnAuthorized user should not be able to login",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_UnAuthorized_user_should_not_be_able_to_login()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 2734276200,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-05-27T13:00:05.798Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1551163000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 26,
-        "name": "UnAuthorized users should not be able to login to the application",
-        "description": "",
-        "id": "smoketest;unauthorized-users-should-not-be-able-to-login-to-the-application;;3",
-        "after": [
-          {
-            "result": {
-              "duration": 660852400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 286823600,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "the user enters the invalid user \"librarian181@librar\"\"WwRsaD3J\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"librarian181@librar\"",
-                  "offset": 33
-                },
-                {
-                  "val": "\"WwRsaD3J\"",
-                  "offset": 54
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_user(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 201875900,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "the user enters the invalid passwords \"librarian181@librar\"\"WwRsaD3J\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"librarian181@librar\"",
-                  "offset": 38
-                },
-                {
-                  "val": "\"WwRsaD3J\"",
-                  "offset": 59
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_invalid_passwords(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3008190400,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "the UnAuthorized user should not be able to login",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_UnAuthorized_user_should_not_be_able_to_login()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 2731320000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-05-27T13:00:14.249Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1463154200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 31,
-        "name": "Librarian users should be able to add books",
-        "description": "",
-        "id": "smoketest;librarian-users-should-be-able-to-add-books",
-        "after": [
-          {
-            "result": {
-              "duration": 695880000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 270832200,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "the user enters the librarian information",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_librarian_information()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 824493900,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "the user navigate to Books module",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.AddBookSepDefs.the_user_navigate_to_Books_module()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 340789700,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "the user click on Add Book button",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.AddBookSepDefs.the_user_click_on_Add_Book_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 580642800,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "fill the necessary input boxes with valid inputs \"A Book Name\" \"2020\" \"1234567890\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"A Book Name\"",
-                  "offset": 49
-                },
-                {
-                  "val": "\"2020\"",
-                  "offset": 63
-                },
-                {
-                  "val": "\"1234567890\"",
-                  "offset": 70
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.AddBookSepDefs.fillTheNecessaryInputBoxesWithValidInputs(java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 85947500,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "the user click on Save Changes",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.AddBookSepDefs.the_user_click_on_Save_Changes()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 998800,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "\"The book has been created.\" message should be displayed",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"The book has been created.\"",
-                  "offset": 0
-                }
-              ],
-              "location": "com.PubLibrary.step_definitions.AddBookSepDefs.message_should_be_displayed(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 2489469100,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-05-27T13:00:21.252Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1585464700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 40,
-        "name": "User should be able to logout",
-        "description": "",
-        "id": "smoketest;user-should-be-able-to-logout",
-        "after": [
-          {
-            "result": {
-              "duration": 713613800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 272831300,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "the user enters the student information",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_student_information()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3008496300,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "the user should be able to login",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_should_be_able_to_login()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 10992600,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "user is at the dashbord page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Logout.user_is_at_the_dashbord_page()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 65957800,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "clicks the button with his username",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Logout.clicks_the_button_with_his_username()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 591318400,
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "a drowdown shows up",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Logout.a_drowdown_shows_up()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "click on the logout button",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Logout.click_on_the_logout_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 10993500,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "user should be in the logout page",
-            "match": {
-              "location": "com.PubLibrary.step_definitions.Logout.user_should_be_in_the_logout_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke"
+            "name": "@logout"
           }
         ]
       }
     ],
-    "name": "smoketest",
+    "name": "User should be able to Log out",
     "description": "",
-    "id": "smoketest",
+    "id": "user-should-be-able-to-log-out",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Smoke.feature",
+    "uri": "file:src/test/resources/features/logout.feature",
     "tags": [
       {
-        "name": "@smoke",
+        "name": "@logout",
         "type": "Tag",
         "location": {
-          "line": 2,
+          "line": 1,
           "column": 1
         }
       }
