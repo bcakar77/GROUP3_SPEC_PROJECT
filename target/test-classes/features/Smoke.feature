@@ -39,6 +39,7 @@ Feature: smoketest
 
   Scenario: User should be able to logout
     When the user enters the student information
+    Then the user should be able to login
     And user is at the dashbord page
     And clicks the button with his username
     And a drowdown shows up
