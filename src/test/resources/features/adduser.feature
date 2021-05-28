@@ -8,7 +8,7 @@ Feature: Only librarians should be able to add users
     When the user enters the librarian information
     And the user navigate to Users module
     And the user click on Add User button
-    And fill the necessary input boxes with valid inputs "Users full name" "12345" "email@librarian.com"
+    And fill the required input boxes with valid inputs "Users full name" "12345" "email@librarian.com"
     And the user click on Save Changes
     Then "The user has been created." message should be displayed
   @addUserWithStudent
@@ -20,20 +20,20 @@ Feature: Only librarians should be able to add users
     When the user enters the librarian information
     And the user navigate to Users module
     And the user click on Add User button
-    Then following book parameters should be displayed on the table
+    Then below user parameters should be displayed on the window
       | Full Name     |
       | Password      |
       | Email         |
       | User Group    |
       | Status        |
-      | Start  Date   |
-      | End  Date     |
+      | Start Date    |
+      | End Date      |
   @verifyFullNameRestrictions
   Scenario Outline: Full Name should be up to 64 digits in length and only consists of letters dashes (-) space ( ) and apostrophe (')
     When the user enters the librarian information
     And the user navigate to Users module
     And the user click on Add User button
-    And fill the necessary input boxes with valid inputs "<FullName>" "202021" "email@test.c"
+    And fill the required input boxes with valid inputs "<FullName>" "password123" "email@test.lib"
     Then "<Expected Message>" message should be displayed
     Examples:
       | FullName           | Expected Message           |
@@ -50,7 +50,7 @@ Feature: Only librarians should be able to add users
     When the user enters the librarian information
     And the user navigate to Users module
     And the user click on Add User button
-    Then following book categories should be able to selected on the dropdown menu
+    Then following user types should be able to be selected on the dropdown menu
       | Librarian    |
       | Students     |
 
@@ -60,5 +60,5 @@ Feature: Only librarians should be able to add users
     And the user navigate to Users module
     And the user click on Add User button
     Then following status options should be able to be selected on the dropdown menu
-      | Librarian    |
-      | Students     |
+      | ACTIVE    |
+      | INACTIVE  |

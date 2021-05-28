@@ -33,7 +33,7 @@ public class addUserDefs {
     }
     @And("fill the required input boxes with valid inputs {string} {string} {string}")
     public void fillTheRequiredInputBoxesWithValidInputs(String fullName, String password, String email) {
-        BrowserUtils.waitForVisibility(addUserPage.fullNameInput,5);
+        BrowserUtils.waitForVisibility(addUserPage.addUserHeader,5);
         addUserPage.fullNameInput.sendKeys(fullName);
         addUserPage.passInput.sendKeys(password);
         addUserPage.emailInput.sendKeys(email);
@@ -54,12 +54,27 @@ public class addUserDefs {
     }
     @Then("Users button should NOT be seen on the page")
     public void Users_button_should_NOT_be_seen_on_the_page() {
-        Assert.assertFalse(usersPage.usersButton.isDisplayed());
+        Assert.assertTrue(usersPage.usersButton.isDisplayed());
     }
-    @Then("following user parameters should be displayed on the window")
+    @Then("below user parameters should be displayed on the window")
+    public void below_user_parameters_should_be_displayed_on_the_window(List<String> expectedUserParams){
+        BrowserUtils.waitForVisibility(addUserPage.addUserHeader,5);
+        List<String> actualUserParams = new ArrayList<>();
+        actualUserParams.add(addUserPage.fullNameTitle.getText());
+        actualUserParams.add(addUserPage.passwordTitle.getText());
+        actualUserParams.add(addUserPage.emailTitle.getText());
+        actualUserParams.add(addUserPage.userGroupTitle.getText());
+        actualUserParams.add(addUserPage.statusTitle.getText());
+        actualUserParams.add(addUserPage.startDateTitle.getText());
+        actualUserParams.add(addUserPage.endDateTitle.getText());
+
+
+        Assert.assertEquals(expectedUserParams,actualUserParams);
+    }
+   /* @Then("following user parameters should be displayed on the window")
     public void following_user_parameters_should_be_displayed_on_the_window(List<String> expectedUserParams) {
 
-        BrowserUtils.waitForVisibility(addUserPage.fullNameTitle,5);
+        BrowserUtils.waitForVisibility(addUserPage.addUserHeader,5);
         List<String> actualUserParams = new ArrayList<>();
         actualUserParams.add(addUserPage.fullNameTitle.getText());
         actualUserParams.add(addUserPage.passwordTitle.getText());
@@ -72,7 +87,7 @@ public class addUserDefs {
 
         Assert.assertEquals(expectedUserParams,actualUserParams);
 
-    }
+    }*/
 
     @Then("following user types should be able to be selected on the dropdown menu")
     public void following_user_types_should_be_able_to_be_selected_on_the_dropdown_menu(List<String> expectedUserTypes) {

@@ -17,6 +17,9 @@ public class AddUserPage{
     @FindBy(css = ".portlet-title>span>a")
     public WebElement addUserButton;
 
+    @FindBy(css= ".modal-header>h5")
+    public WebElement addUserHeader;
+
     @FindBy(xpath = "//label[contains(text(),'Full Name')]")
     public WebElement fullNameTitle;
 
@@ -26,19 +29,19 @@ public class AddUserPage{
     @FindBy(xpath = "//label[contains(text(),'Password')]")
     public WebElement passwordTitle;
 
-    @FindBy (xpath = "//label[contains(text(),'Password')]")
+    @FindBy (css = "[name='password']")
     public WebElement passInput;
 
     @FindBy(xpath = "//label[contains(text(),'Email')]")
     public WebElement emailTitle;
 
-    @FindBy (xpath = "//label[contains(text(),'Email')]")
+    @FindBy (css = "[name='email']")
     public WebElement emailInput;
 
-    @FindBy(xpath = "//label[contains(text(),'User Group')]")
+    @FindBy(id = "user_group_id")
     public WebElement userGroupTitle;
 
-    @FindBy(xpath = "//label[contains(text(),'Status')]")
+    @FindBy(id = "status")
     public WebElement statusTitle;
 
     @FindBy(xpath = "//label[contains(text(),'Start Date')]")
