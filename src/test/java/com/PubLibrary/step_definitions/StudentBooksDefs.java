@@ -12,8 +12,8 @@ public class StudentBooksDefs {
     StudentBooksPage studentBooksPage= new StudentBooksPage();
     DashboardPage dashboardPage=new DashboardPage();
 
-    @When("the user navigate to Books module")
-    public void theUserNavigateToBooksModule() {
+    @When("the user navigate to the Books module")
+    public void theUserNavigateToTheBooksModule() {
         BrowserUtils.waitForClickablility(dashboardPage.studentBooksButton,5);
         dashboardPage.studentBooksButton.click();
 

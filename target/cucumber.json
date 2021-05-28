@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3281000000,
+              "duration": 3005000000,
               "status": "passed"
             },
             "line": 5,
@@ -24,11 +24,11 @@
         ]
       },
       {
-        "start_timestamp": "2021-05-26T20:11:20.788Z",
+        "start_timestamp": "2021-05-28T16:09:49.578Z",
         "before": [
           {
             "result": {
-              "duration": 3350000000,
+              "duration": 3438000000,
               "status": "passed"
             },
             "match": {
@@ -36,14 +36,14 @@
             }
           }
         ],
-        "line": 7,
-        "name": "verify that student can find book by using search box with name",
+        "line": 58,
+        "name": "Verify the status options in the Add User Page",
         "description": "",
-        "id": "student-can-find-book-by-using-search-box-with-book-s-name-and-author.;verify-that-student-can-find-book-by-using-search-box-with-name",
+        "id": "only-librarians-should-be-able-to-add-users;verify-the-status-options-in-the-add-user-page",
         "after": [
           {
             "result": {
-              "duration": 642000000,
+              "duration": 1240000000,
               "status": "passed"
             },
             "match": {
@@ -56,53 +56,89 @@
         "steps": [
           {
             "result": {
-              "duration": 316000000,
+              "duration": 563000000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "the user enters the student information",
+            "line": 59,
+            "name": "the user enters the librarian information",
             "match": {
-              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_student_information()"
+              "location": "com.PubLibrary.step_definitions.loginDefs.the_user_enters_the_librarian_information()"
             },
-            "keyword": "Given "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 6540000000,
+              "duration": 1377000000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "the user enters book\u0027s name into search input",
+            "line": 60,
+            "name": "the user navigate to Users module",
             "match": {
-              "location": "com.PubLibrary.step_definitions.StudentBooksDefs.theUserEntersBookSNameIntoSearchInput()"
+              "location": "com.PubLibrary.step_definitions.addUserDefs.user_navigate_to_Users_module()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 47000000,
+              "duration": 565000000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "the user should be able to see the book\u0027s name under the Name title",
+            "line": 61,
+            "name": "the user click on Add User button",
             "match": {
-              "location": "com.PubLibrary.step_definitions.StudentBooksDefs.theUserShouldBeAbleToSeeTheBookSNameUnderTheNameTitle()"
+              "location": "com.PubLibrary.step_definitions.addUserDefs.user_click_on_Add_User_button()"
             },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 935000000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "following status options should be able to be selected on the dropdown menu",
+            "match": {
+              "location": "com.PubLibrary.step_definitions.addUserDefs.following_status_options_should_be_able_to_be_selected_on_the_dropdown_menu(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "ACTIVE"
+                ]
+              },
+              {
+                "cells": [
+                  "INACTIVE"
+                ]
+              }
+            ],
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@wip"
+            "name": "@addUser"
+          },
+          {
+            "name": "@verifyStatusOptions"
           }
         ]
       }
     ],
-    "name": "Student can find book by using search box with book\u0027s Name and Author.",
-    "description": "",
-    "id": "student-can-find-book-by-using-search-box-with-book-s-name-and-author.",
+    "name": "Only librarians should be able to add users",
+    "description": "  Description: The purpose of this feature is to test the add user functionality",
+    "id": "only-librarians-should-be-able-to-add-users",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/StudentBooks.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/adduser.feature",
+    "tags": [
+      {
+        "name": "@addUser",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
